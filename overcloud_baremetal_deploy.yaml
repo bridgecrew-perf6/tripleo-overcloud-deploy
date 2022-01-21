@@ -1,0 +1,42 @@
+- name: Controller
+  count: 1
+  defaults:
+    networks:
+    - network: ctlplane
+      subnet: ctlplane-subnet
+      vif: true
+    - network: internal_api
+      subnet: internal_api_subnet
+    - network: external
+      subnet: external_subnet
+    network_config:
+      template: /home/stack/provision_nodes/multiple_nics_ctl.j2
+      networks_skip_config:
+      - DataVlan
+      - Tenant
+      default_route_network:
+      - external
+  instances:
+    - hostname: oc-ctl-0
+      name: ovirt-controller-0
+
+- name: Compute
+  count: 1
+  defaults:
+    networks:
+    - network: ctlplane
+      subnet: ctlplane-subnet
+      vif: true
+    - network: internal_api
+      subnet: internal_api_subnet
+    - network: tenant
+      subnet: tenant_subnet
+    - network: data_vlan
+      subnet: data_vlan_subnet
+    network_config:
+      template: /home/stack/provision_nodes/multiple_nics_comp.j2
+      networks_skip_config:
+      - External
+  instances:
+    - hostname: oc-comp-0
+      name: ovirt-compute-0

@@ -1,0 +1,23 @@
+parameter_defaults:
+  ControlPlaneVipData:
+    fixed_ips:
+    - ip_address: 172.22.43.5
+    name: control_virtual_ip
+    network:
+      tags:
+      - 172.22.43.0/24
+    subnets:
+    - ip_version: 4
+  VipPortMap:
+    external:
+      ip_address: 172.22.40.5
+      ip_address_uri: 172.22.40.5
+      ip_subnet: 172.22.40.5/24
+    internal_api:
+      ip_address: 172.22.41.5
+      ip_address_uri: 172.22.41.5
+      ip_subnet: 172.22.41.5/24
+resource_registry:
+  OS::TripleO::Network::Ports::ControlPlaneVipPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_vip_ctlplane.yaml
+  OS::TripleO::Network::Ports::ExternalVipPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_vip_external.yaml
+  OS::TripleO::Network::Ports::InternalApiVipPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_vip_internal_api.yaml
