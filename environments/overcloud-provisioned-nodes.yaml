@@ -1,0 +1,91 @@
+parameter_defaults:
+  ComputeCount: 2
+  ComputeHostnameFormat: '%stackname%-novacompute-%index%'
+  ControllerCount: 2
+  ControllerHostnameFormat: '%stackname%-controller-%index%'
+  DeployedServerPortMap:
+    oc-comp-0-ctlplane:
+      fixed_ips:
+      - ip_address: 172.22.43.45
+    oc-comp-1-ctlplane:
+      fixed_ips:
+      - ip_address: 172.22.43.28
+    oc-ctl-0-ctlplane:
+      fixed_ips:
+      - ip_address: 172.22.43.42
+    oc-ctl-1-ctlplane:
+      fixed_ips:
+      - ip_address: 172.22.43.33
+  HostnameMap:
+    overcloud-controller-0: oc-ctl-0
+    overcloud-controller-1: oc-ctl-1
+    overcloud-novacompute-0: oc-comp-0
+    overcloud-novacompute-1: oc-comp-1
+  NodePortMap:
+    oc-comp-0:
+      ctlplane:
+        ip_address: 172.22.43.45
+        ip_address_uri: 172.22.43.45
+        ip_subnet: 172.22.43.45/24
+      data_vlan:
+        ip_address: 172.22.45.38
+        ip_address_uri: 172.22.45.38
+        ip_subnet: 172.22.45.38/24
+      internal_api:
+        ip_address: 172.22.41.39
+        ip_address_uri: 172.22.41.39
+        ip_subnet: 172.22.41.39/24
+      tenant:
+        ip_address: 172.22.44.34
+        ip_address_uri: 172.22.44.34
+        ip_subnet: 172.22.44.34/24
+    oc-comp-1:
+      ctlplane:
+        ip_address: 172.22.43.28
+        ip_address_uri: 172.22.43.28
+        ip_subnet: 172.22.43.28/24
+      data_vlan:
+        ip_address: 172.22.45.37
+        ip_address_uri: 172.22.45.37
+        ip_subnet: 172.22.45.37/24
+      internal_api:
+        ip_address: 172.22.41.35
+        ip_address_uri: 172.22.41.35
+        ip_subnet: 172.22.41.35/24
+      tenant:
+        ip_address: 172.22.44.39
+        ip_address_uri: 172.22.44.39
+        ip_subnet: 172.22.44.39/24
+    oc-ctl-0:
+      ctlplane:
+        ip_address: 172.22.43.42
+        ip_address_uri: 172.22.43.42
+        ip_subnet: 172.22.43.42/24
+      external:
+        ip_address: 172.22.40.33
+        ip_address_uri: 172.22.40.33
+        ip_subnet: 172.22.40.33/24
+      internal_api:
+        ip_address: 172.22.41.38
+        ip_address_uri: 172.22.41.38
+        ip_subnet: 172.22.41.38/24
+    oc-ctl-1:
+      ctlplane:
+        ip_address: 172.22.43.33
+        ip_address_uri: 172.22.43.33
+        ip_subnet: 172.22.43.33/24
+      external:
+        ip_address: 172.22.40.40
+        ip_address_uri: 172.22.40.40
+        ip_subnet: 172.22.40.40/24
+      internal_api:
+        ip_address: 172.22.41.30
+        ip_address_uri: 172.22.41.30
+        ip_subnet: 172.22.41.30/24
+resource_registry:
+  OS::TripleO::Compute::Ports::DataVlanPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_data_vlan.yaml
+  OS::TripleO::Compute::Ports::InternalApiPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_internal_api.yaml
+  OS::TripleO::Compute::Ports::TenantPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_tenant.yaml
+  OS::TripleO::Controller::Ports::ExternalPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_external.yaml
+  OS::TripleO::Controller::Ports::InternalApiPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_internal_api.yaml
+  OS::TripleO::DeployedServer::ControlPlanePort: /usr/share/openstack-tripleo-heat-templates/deployed-server/deployed-neutron-port.yaml

@@ -1,5 +1,5 @@
 - name: Controller
-  count: 1
+  count: 2
   defaults:
     networks:
     - network: ctlplane
@@ -10,7 +10,7 @@
     - network: external
       subnet: external_subnet
     network_config:
-      template: /home/stack/provision_nodes/multiple_nics_ctl.j2
+      template: ~/tripleo-overcloud-deploy/nic-config/multiple_nics_ctl.j2
       networks_skip_config:
       - DataVlan
       - Tenant
@@ -19,9 +19,11 @@
   instances:
     - hostname: oc-ctl-0
       name: ovirt-controller-0
+    - hostname: oc-ctl-1
+      name: ovirt-controller-1
 
 - name: Compute
-  count: 1
+  count: 2
   defaults:
     networks:
     - network: ctlplane
@@ -34,9 +36,12 @@
     - network: data_vlan
       subnet: data_vlan_subnet
     network_config:
-      template: /home/stack/provision_nodes/multiple_nics_comp.j2
+      template: ~/tripleo-overcloud-deploy/nic-config/multiple_nics_comp.j2
       networks_skip_config:
       - External
   instances:
     - hostname: oc-comp-0
       name: ovirt-compute-0
+    - hostname: oc-comp-1
+      name: ovirt-compute-1
+

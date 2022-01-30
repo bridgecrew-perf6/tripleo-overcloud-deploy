@@ -1,6 +1,5 @@
-#!/bin/bash
 openstack overcloud node provision \
 --stack overcloud \
 --network-config \
---output ~/provision_nodes/overcloud-baremetal-deployed.yaml \
-~/provision_nodes/overcloud_baremetal_deploy.yaml
+--output ~/tripleo-overcloud-deploy/environments/overcloud-provisioned-nodes.yaml \
+~/tripleo-overcloud-deploy/templates/overcloud_node_provision.yaml

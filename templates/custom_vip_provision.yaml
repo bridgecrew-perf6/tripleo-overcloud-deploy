@@ -28,11 +28,11 @@
 #        default: overcloud
 #
 - network: internal_api
-  dns_name: overcloud
-  ip_address: 172.22.41.5
+  dns_name: internal-vip
+  ip_address: 172.22.41.25
 - network: external
-  dns_name: overcloud
-  ip_address: 172.22.40.5
+  dns_name: external-vip
+  ip_address: 172.22.40.25
 - network: ctlplane
-  dns_name: overcloud
-  ip_address: 172.22.43.5
+  dns_name: ctlplane-vip
+  ip_address: 172.22.43.25

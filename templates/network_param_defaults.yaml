@@ -1,0 +1,4 @@
+parameter_defaults:
+  DnsServer: ["8.8.8.8", "1.1.1.1"]
+  CloudDomain: ooo.maas
+  NeutronBridgeMappings: "datacentre:br-data_vlan,tenant:br-tenant"

@@ -1,3 +1,0 @@
-parameter_defaults:
-  ControllerNetworkConfigTemplate: '/home/stack/provision_nodes/multiple_nics_ctl.j2'
-  ComputeNetworkConfigTemplate: '/home/stack/provision_nodes/multiple_nics_comp.j2'

@@ -3,12 +3,12 @@ parameter_defaults:
     net_attributes_map:
       data_vlan:
         network:
-          dns_domain: datavlan.maas.
+          dns_domain: datavlan.ooo.maas.
           mtu: 1500
           name: data_vlan
           tags:
-          - tripleo_network_name=DataVlan
           - tripleo_net_idx=2
+          - tripleo_network_name=DataVlan
         subnets:
           data_vlan_subnet:
             cidr: 172.22.45.0/24
@@ -21,13 +21,13 @@ parameter_defaults:
             - tripleo_vlan_id=45
       external:
         network:
-          dns_domain: external.maas.
+          dns_domain: extenal.ooo.maas.
           mtu: 1500
           name: external
           tags:
+          - tripleo_net_idx=3
           - tripleo_network_name=External
           - tripleo_vip=true
-          - tripleo_net_idx=3
         subnets:
           external_subnet:
             cidr: 172.22.40.0/24
@@ -40,7 +40,7 @@ parameter_defaults:
             - tripleo_vlan_id=40
       internal_api:
         network:
-          dns_domain: internalapi.maas.
+          dns_domain: internalapi.ooo.maas.
           mtu: 1500
           name: internal_api
           tags:
@@ -59,12 +59,12 @@ parameter_defaults:
             - tripleo_vlan_id=41
       tenant:
         network:
-          dns_domain: tenant.maas.
+          dns_domain: tenant.ooo.maas.
           mtu: 1500
           name: tenant
           tags:
-          - tripleo_network_name=Tenant
           - tripleo_net_idx=1
+          - tripleo_network_name=Tenant
         subnets:
           tenant_subnet:
             cidr: 172.22.44.0/24

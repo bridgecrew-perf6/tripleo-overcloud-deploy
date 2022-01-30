@@ -1,0 +1,10 @@
+templates: /usr/share/openstack-tripleo-heat-templates/ 
+environments:
+ - /home/stack/tripleo-overcloud-deploy/environments/overcloud-provisioned-nodes.yaml
+ - /home/stack/tripleo-overcloud-deploy/environments/overcloud-provisioned-networks.yaml
+ - /home/stack/tripleo-overcloud-deploy/environments/overcloud-provisioned-vip.yaml
+ - /home/stack/tripleo-overcloud-deploy/environments/multi_nic_config.yaml
+ - /home/stack/tripleo-overcloud-deploy/environments/container-image-prepare-parameter.yaml
+ - /home/stack/tripleo-overcloud-deploy/templates/network_param_defaults.yaml 
+ - /home/stack/tripleo-overcloud-deploy/templates/nova_param_defaults.yaml 
+ - /home/stack/tripleo-overcloud-deploy/templates/enable_root_password.yaml

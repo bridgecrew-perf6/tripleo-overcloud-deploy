@@ -1,0 +1,86 @@
+{
+      "nodes": [
+          {
+              "name":"ovirt-controller-0",
+              "pm_type":"staging-ovirt",
+              "ports": [
+                {
+                    "address": "56:6f:16:55:00:20",
+                    "physical_network": "ctlplane"
+                }
+              ],
+              "cpu":"8",
+              "memory":"16384",
+              "disk":"200",
+              "arch":"x86_64",
+              "pm_user":"admin@internal",
+              "pm_password":"pass@123",
+              "pm_addr":"he1-ovirt-njlab.maas",
+              "pm_vm_name":"overcloud-controller-0",
+              "capabilities": "profile:control,boot_option:local,node:controller-0",
+              "_comment": "Ovirt Virtual Machine"
+
+          },
+          {
+              "name":"ovirt-controller-1",
+              "pm_type":"staging-ovirt",
+              "ports": [
+                {
+                    "address": "56:6f:16:55:00:00",
+                    "physical_network": "ctlplane"
+                }
+              ],
+              "cpu":"8",
+              "memory":"16384",
+              "disk":"200",
+              "arch":"x86_64",
+              "pm_user":"admin@internal",
+              "pm_password":"pass@123",
+              "pm_addr":"he1-ovirt-njlab.maas",
+              "pm_vm_name":"overcloud-controller-1",
+              "capabilities": "profile:control,boot_option:local,node:controller-1",
+              "_comment": "Ovirt Virtual Machine"
+
+          },
+          {
+              "name":"ovirt-compute-0",
+              "pm_type":"staging-ovirt",
+              "ports": [
+                {
+                    "address": "56:6f:16:55:00:23",
+                    "physical_network": "ctlplane"
+                }
+              ],
+              "cpu":"4",
+              "memory":"16384",
+              "disk":"200",
+              "arch":"x86_64",
+              "pm_user":"admin@internal",
+              "pm_password":"pass@123",
+              "pm_addr":"he1-ovirt-njlab.maas",
+              "pm_vm_name":"overcloud-compute-0",
+              "capabilities": "profile:compute,boot_option:local,node:compute-0",
+              "_comment": "Ovirt Virtual Machine"
+          },
+          {
+              "name":"ovirt-compute-1",
+              "pm_type":"staging-ovirt",
+              "ports": [
+                {
+                    "address": "56:6f:16:55:00:03",
+                    "physical_network": "ctlplane"
+                }
+              ],
+              "cpu":"4",
+              "memory":"16384",
+              "disk":"200",
+              "arch":"x86_64",
+              "pm_user":"admin@internal",
+              "pm_password":"pass@123",
+              "pm_addr":"he1-ovirt-njlab.maas",
+              "pm_vm_name":"overcloud-compute-1",
+              "capabilities": "profile:compute,boot_option:local,node:compute-1",
+              "_comment": "Ovirt Virtual Machine"
+          }
+      ]
+}
