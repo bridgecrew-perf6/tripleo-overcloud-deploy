@@ -81,6 +81,126 @@
               "pm_vm_name":"overcloud-compute-1",
               "capabilities": "profile:compute,boot_option:local,node:compute-1",
               "_comment": "Ovirt Virtual Machine"
+          },
+          {
+              "name":"ovirt-ceph-mon-0",
+              "pm_type":"staging-ovirt",
+              "ports": [
+                {
+                    "address": "56:6f:16:55:00:07",
+                    "physical_network": "ctlplane"
+                }
+              ],
+              "cpu":"2",
+              "memory":"8192",
+              "disk":"200",
+              "arch":"x86_64",
+              "pm_user":"admin@internal",
+              "pm_password":"pass@123",
+              "pm_addr":"he1-ovirt-njlab.maas",
+              "pm_vm_name":"overcloud-cephmon-0",
+              "capabilities": "profile:ceph-storage,boot_option:local,node:ceph-mon-0",
+              "_comment": "Ovirt Virtual Machine"
+          },
+          {
+              "name":"ovirt-ceph-mon-1",
+              "pm_type":"staging-ovirt",
+              "ports": [
+                {
+                    "address": "56:6f:16:55:00:09",
+                    "physical_network": "ctlplane"
+                }
+              ],
+              "cpu":"2",
+              "memory":"8192",
+              "disk":"200",
+              "arch":"x86_64",
+              "pm_user":"admin@internal",
+              "pm_password":"pass@123",
+              "pm_addr":"he1-ovirt-njlab.maas",
+              "pm_vm_name":"overcloud-cephmon-1",
+              "capabilities": "profile:ceph-storage,boot_option:local,node:ceph-mon-1",
+              "_comment": "Ovirt Virtual Machine"
+          },
+          {
+              "name":"ovirt-ceph-mon-2",
+              "pm_type":"staging-ovirt",
+              "ports": [
+                {
+                    "address": "56:6f:16:55:00:0b",
+                    "physical_network": "ctlplane"
+                }
+              ],
+              "cpu":"2",
+              "memory":"8192",
+              "disk":"200",
+              "arch":"x86_64",
+              "pm_user":"admin@internal",
+              "pm_password":"pass@123",
+              "pm_addr":"he1-ovirt-njlab.maas",
+              "pm_vm_name":"overcloud-cephmon-2",
+              "capabilities": "profile:ceph-storage,boot_option:local,node:ceph-mon-2",
+              "_comment": "Ovirt Virtual Machine"
+          },
+          {
+              "name":"ovirt-ceph-osd-0",
+              "pm_type":"staging-ovirt",
+              "ports": [
+                {
+                    "address": "56:6f:16:55:00:0d",
+                    "physical_network": "ctlplane"
+                }
+              ],
+              "cpu":"2",
+              "memory":"8192",
+              "disk":"200",
+              "arch":"x86_64",
+              "pm_user":"admin@internal",
+              "pm_password":"pass@123",
+              "pm_addr":"he1-ovirt-njlab.maas",
+              "pm_vm_name":"overcloud-cephosd-0",
+              "capabilities": "profile:ceph-storage,boot_option:local,node:ceph-osd-0",
+              "_comment": "Ovirt Virtual Machine"
+          },
+          {
+              "name":"ovirt-ceph-osd-1",
+              "pm_type":"staging-ovirt",
+              "ports": [
+                {
+                    "address": "56:6f:16:55:00:0f",
+                    "physical_network": "ctlplane"
+                }
+              ],
+              "cpu":"2",
+              "memory":"8192",
+              "disk":"200",
+              "arch":"x86_64",
+              "pm_user":"admin@internal",
+              "pm_password":"pass@123",
+              "pm_addr":"he1-ovirt-njlab.maas",
+              "pm_vm_name":"overcloud-cephosd-1",
+              "capabilities": "profile:ceph-storage,boot_option:local,node:ceph-osd-1",
+              "_comment": "Ovirt Virtual Machine"
+          },
+          {
+              "name":"ovirt-ceph-osd-2",
+              "pm_type":"staging-ovirt",
+              "ports": [
+                {
+                    "address": "56:6f:16:55:00:11",
+                    "physical_network": "ctlplane"
+                }
+              ],
+              "cpu":"2",
+              "memory":"8192",
+              "disk":"200",
+              "arch":"x86_64",
+              "pm_user":"admin@internal",
+              "pm_password":"pass@123",
+              "pm_addr":"he1-ovirt-njlab.maas",
+              "pm_vm_name":"overcloud-cephosd-2",
+              "capabilities": "profile:ceph-storage,boot_option:local,node:ceph-osd-2",
+              "_comment": "Ovirt Virtual Machine"
           }
       ]
 }

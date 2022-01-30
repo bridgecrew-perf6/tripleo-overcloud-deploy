@@ -1,0 +1,44 @@
+{
+      "nodes": [
+          {
+              "name":"maas-ceph-osd-0",
+              "pm_type":"ipmi",
+              "ports": [
+                {
+                    "address": "1c:c1:de:02:ef:f2",
+                    "physical_network": "ctlplane"
+                }
+              ],
+              "cpu":"6",
+              "memory":"16384",
+              "disk":"3000",
+              "arch":"x86_64",
+              "pm_user":"admin",
+              "pm_password":"DcdHXUzL",
+              "pm_addr":"172.22.100.31",
+              "capabilities": "profile:ceph-storage,boot_option:local,node:ceph-osd-0",
+              "_comment": "MAAS baremetal node"
+
+          },
+          {
+              "name":"maas-ceph-osd-1",
+              "pm_type":"ipmi",
+              "ports": [
+                {
+                    "address": "1c:c1:de:03:a0:1a",
+                    "physical_network": "ctlplane"
+                }
+              ],
+              "cpu":"6",
+              "memory":"16384",
+              "disk":"3000",
+              "arch":"x86_64",
+              "pm_user":"admin",
+              "pm_password":"DcdHXUzL",
+              "pm_addr":"172.22.100.32",
+              "capabilities": "profile:ceph-storage,boot_option:local,node:ceph-osd-1",
+              "_comment": "MAAS baremetal node"
+
+          }
+      ]
+}
