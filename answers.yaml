@@ -8,3 +8,4 @@ environments:
  - /home/stack/tripleo-overcloud-deploy/templates/network_param_defaults.yaml 
  - /home/stack/tripleo-overcloud-deploy/templates/nova_param_defaults.yaml 
  - /home/stack/tripleo-overcloud-deploy/templates/enable_root_password.yaml
+ - /home/stack/tripleo-overcloud-deploy/templates/ceph_mon_param_defaults.yaml
