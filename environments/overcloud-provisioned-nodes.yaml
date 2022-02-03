@@ -1,4 +1,8 @@
 parameter_defaults:
+  CephMonCount: 3
+  CephMonHostnameFormat: '%stackname%-cephmon-%index%'
+  CephStorageCount: 3
+  CephStorageHostnameFormat: '%stackname%-cephstorage-%index%'
   ComputeCount: 2
   ComputeHostnameFormat: '%stackname%-novacompute-%index%'
   ControllerCount: 2
@@ -16,7 +20,31 @@ parameter_defaults:
     oc-ctl-1-ctlplane:
       fixed_ips:
       - ip_address: 172.22.43.33
+    oc-mon-0-ctlplane:
+      fixed_ips:
+      - ip_address: 172.22.43.34
+    oc-mon-1-ctlplane:
+      fixed_ips:
+      - ip_address: 172.22.43.32
+    oc-mon-2-ctlplane:
+      fixed_ips:
+      - ip_address: 172.22.43.35
+    oc-osd-0-ctlplane:
+      fixed_ips:
+      - ip_address: 172.22.43.37
+    oc-osd-1-ctlplane:
+      fixed_ips:
+      - ip_address: 172.22.43.24
+    oc-osd-2-ctlplane:
+      fixed_ips:
+      - ip_address: 172.22.43.40
   HostnameMap:
+    overcloud-cephmon-0: oc-mon-0
+    overcloud-cephmon-1: oc-mon-1
+    overcloud-cephmon-2: oc-mon-2
+    overcloud-cephstorage-0: oc-osd-0
+    overcloud-cephstorage-1: oc-osd-1
+    overcloud-cephstorage-2: oc-osd-2
     overcloud-controller-0: oc-ctl-0
     overcloud-controller-1: oc-ctl-1
     overcloud-novacompute-0: oc-comp-0
@@ -82,7 +110,63 @@ parameter_defaults:
         ip_address: 172.22.41.30
         ip_address_uri: 172.22.41.30
         ip_subnet: 172.22.41.30/24
+    oc-mon-0:
+      ctlplane:
+        ip_address: 172.22.43.34
+        ip_address_uri: 172.22.43.34
+        ip_subnet: 172.22.43.34/24
+      storage:
+        ip_address: 172.22.42.34
+        ip_address_uri: 172.22.42.34
+        ip_subnet: 172.22.42.34/24
+    oc-mon-1:
+      ctlplane:
+        ip_address: 172.22.43.32
+        ip_address_uri: 172.22.43.32
+        ip_subnet: 172.22.43.32/24
+      storage:
+        ip_address: 172.22.42.31
+        ip_address_uri: 172.22.42.31
+        ip_subnet: 172.22.42.31/24
+    oc-mon-2:
+      ctlplane:
+        ip_address: 172.22.43.35
+        ip_address_uri: 172.22.43.35
+        ip_subnet: 172.22.43.35/24
+      storage:
+        ip_address: 172.22.42.36
+        ip_address_uri: 172.22.42.36
+        ip_subnet: 172.22.42.36/24
+    oc-osd-0:
+      ctlplane:
+        ip_address: 172.22.43.37
+        ip_address_uri: 172.22.43.37
+        ip_subnet: 172.22.43.37/24
+      storage:
+        ip_address: 172.22.42.32
+        ip_address_uri: 172.22.42.32
+        ip_subnet: 172.22.42.32/24
+    oc-osd-1:
+      ctlplane:
+        ip_address: 172.22.43.24
+        ip_address_uri: 172.22.43.24
+        ip_subnet: 172.22.43.24/24
+      storage:
+        ip_address: 172.22.42.35
+        ip_address_uri: 172.22.42.35
+        ip_subnet: 172.22.42.35/24
+    oc-osd-2:
+      ctlplane:
+        ip_address: 172.22.43.40
+        ip_address_uri: 172.22.43.40
+        ip_subnet: 172.22.43.40/24
+      storage:
+        ip_address: 172.22.42.38
+        ip_address_uri: 172.22.42.38
+        ip_subnet: 172.22.42.38/24
 resource_registry:
+  OS::TripleO::CephMon::Ports::StoragePort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_storage.yaml
+  OS::TripleO::CephStorage::Ports::StoragePort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_storage.yaml
   OS::TripleO::Compute::Ports::DataVlanPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_data_vlan.yaml
   OS::TripleO::Compute::Ports::InternalApiPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_internal_api.yaml
   OS::TripleO::Compute::Ports::TenantPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_tenant.yaml

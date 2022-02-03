@@ -91,4 +91,4 @@
     - hostname: oc-osd-1
       name: ovirt-ceph-osd-1
     - hostname: oc-osd-2
-      name: ovirt-ceph-osd-0
+      name: ovirt-ceph-osd-2

@@ -1,0 +1,23 @@
+- name: CephStorage
+  count: 3
+  defaults:
+    networks:
+    - network: ctlplane
+      subnet: ctlplane-subnet
+      vif: true
+    - network: storage
+      subnet: storage_subnet
+    network_config:
+      template: ~/tripleo-overcloud-deploy/nic-config/multiple_nics_ceph.j2
+      networks_skip_config:
+      - InternalApi
+      - Tenant
+      - DataVlan
+      - External
+  instances:
+    - hostname: oc-osd-0
+      name: ovirt-ceph-osd-0
+    - hostname: oc-osd-1
+      name: ovirt-ceph-osd-1
+    - hostname: oc-osd-2
+      name: ovirt-ceph-osd-2
