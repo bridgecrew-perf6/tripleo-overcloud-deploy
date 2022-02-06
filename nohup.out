@@ -1,0 +1,47 @@
+
+PLAY [Overcloud Node Unprovision] **********************************************
+[0;36m2022-02-04 14:25:31.479452 | 566f1655-0015-05e9-e189-000000000008 |    SKIPPED | fail | localhost[0m
+[1;30m2022-02-04 14:25:31.483116 | 566f1655-0015-05e9-e189-000000000008 |     TIMING | fail | localhost | 0:00:00.182403 | 0.07s[0m
+[0;36m2022-02-04 14:25:31.550006 | 566f1655-0015-05e9-e189-000000000009 |    SKIPPED | fail | localhost[0m
+[1;30m2022-02-04 14:25:31.552399 | 566f1655-0015-05e9-e189-000000000009 |     TIMING | fail | localhost | 0:00:00.251738 | 0.06s[0m
+[0;36m2022-02-04 14:25:31.608627 | 566f1655-0015-05e9-e189-00000000000a |    SKIPPED | fail | localhost[0m
+[1;30m2022-02-04 14:25:31.611098 | 566f1655-0015-05e9-e189-00000000000a |     TIMING | fail | localhost | 0:00:00.310396 | 0.05s[0m
+2022-02-04 14:25:31.619298 | 566f1655-0015-05e9-e189-00000000000c |       TASK | Expand roles
+[0;33m2022-02-04 14:25:33.942541 | 566f1655-0015-05e9-e189-00000000000c |    CHANGED | Expand roles | localhost[0m
+[1;30m2022-02-04 14:25:33.956997 | 566f1655-0015-05e9-e189-00000000000c |     TIMING | Expand roles | localhost | 0:00:02.656334 | 2.34s[0m
+2022-02-04 14:25:33.972576 | 566f1655-0015-05e9-e189-00000000000d |       TASK | Find existing instances
+[0;32m2022-02-04 14:25:37.888604 | 566f1655-0015-05e9-e189-00000000000d |         OK | Find existing instances | localhost[0m
+[1;30m2022-02-04 14:25:37.901243 | 566f1655-0015-05e9-e189-00000000000d |     TIMING | Find existing instances | localhost | 0:00:06.600579 | 3.93s[0m
+2022-02-04 14:25:37.917474 | 566f1655-0015-05e9-e189-00000000000e |       TASK | Write unprovision confirmation
+[0;33m2022-02-04 14:25:39.107799 | 566f1655-0015-05e9-e189-00000000000e |    CHANGED | Write unprovision confirmation | localhost[0m
+[1;30m2022-02-04 14:25:39.111019 | 566f1655-0015-05e9-e189-00000000000e |     TIMING | Write unprovision confirmation | localhost | 0:00:07.810352 | 1.19s[0m
+2022-02-04 14:25:39.119773 | 566f1655-0015-05e9-e189-00000000000f |       TASK | Unprovision instances
+[0;36m2022-02-04 14:25:39.170727 | 566f1655-0015-05e9-e189-00000000000f |    SKIPPED | Unprovision instances | localhost[0m
+[1;30m2022-02-04 14:25:39.173353 | 566f1655-0015-05e9-e189-00000000000f |     TIMING | Unprovision instances | localhost | 0:00:07.872687 | 0.05s[0m
+2022-02-04 14:25:39.180934 | 566f1655-0015-05e9-e189-000000000010 |       TASK | Unprovision instance network ports
+[0;36m2022-02-04 14:25:39.230970 | 566f1655-0015-05e9-e189-000000000010 |    SKIPPED | Unprovision instance network ports | localhost[0m
+[1;30m2022-02-04 14:25:39.233649 | 566f1655-0015-05e9-e189-000000000010 |     TIMING | Unprovision instance network ports | localhost | 0:00:07.932983 | 0.05s[0m
+
+PLAY RECAP *********************************************************************
+[0;33mlocalhost[0m                  : [0;32mok=3   [0m [0;33mchanged=2   [0m unreachable=0    failed=0    [0;36mskipped=5   [0m rescued=0    ignored=0   
+2022-02-04 14:25:39.242781 | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Summary Information ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-02-04 14:25:39.243725 | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Total Tasks: 8          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-02-04 14:25:39.244648 | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Elapsed Time: 0:00:07.944010 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-02-04 14:25:39.245573 |                                 UUID |       Info |       Host |   Task Name |   Run Time
+2022-02-04 14:25:39.246556 | 566f1655-0015-05e9-e189-00000000000d |    SUMMARY |  localhost | Find existing instances | 3.93s
+2022-02-04 14:25:39.247525 | 566f1655-0015-05e9-e189-00000000000c |    SUMMARY |  localhost | Expand roles | 2.34s
+2022-02-04 14:25:39.248564 | 566f1655-0015-05e9-e189-00000000000e |    SUMMARY |  localhost | Write unprovision confirmation | 1.19s
+2022-02-04 14:25:39.249562 | 566f1655-0015-05e9-e189-000000000008 |    SUMMARY |  localhost | fail | 0.07s
+2022-02-04 14:25:39.250501 | 566f1655-0015-05e9-e189-000000000009 |    SUMMARY |  localhost | fail | 0.06s
+2022-02-04 14:25:39.251432 | 566f1655-0015-05e9-e189-00000000000f |    SUMMARY |  localhost | Unprovision instances | 0.05s
+2022-02-04 14:25:39.252358 | 566f1655-0015-05e9-e189-00000000000a |    SUMMARY |  localhost | fail | 0.05s
+2022-02-04 14:25:39.253327 | 566f1655-0015-05e9-e189-000000000010 |    SUMMARY |  localhost | Unprovision instance network ports | 0.05s
+2022-02-04 14:25:39.254253 | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ End Summary Information ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+User interaction required, cannot confirm.
+Action not confirmed, exiting.
+
++----------+--------------------+--------------------------------------+
+| hostname | name               | id                                   |
++----------+--------------------+--------------------------------------+
+| oc-ctl-0 | ovirt-controller-0 | 01801ce7-68a7-4fb3-97c0-f8f8f5a9827c |
++----------+--------------------+--------------------------------------+

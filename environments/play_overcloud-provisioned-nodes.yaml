@@ -1,0 +1,32 @@
+parameter_defaults:
+  ControllerCount: 1
+  ControllerHostnameFormat: '%stackname%-controller-%index%'
+  DeployedServerPortMap:
+    oc-ctl-0-ctlplane:
+      fixed_ips:
+      - ip_address: 172.22.43.39
+  HostnameMap:
+    overcloud-controller-0: oc-ctl-0
+  NodePortMap:
+    oc-ctl-0:
+      ctlplane:
+        ip_address: 172.22.43.39
+        ip_address_uri: 172.22.43.39
+        ip_subnet: 172.22.43.39/24
+      external:
+        ip_address: 172.22.40.39
+        ip_address_uri: 172.22.40.39
+        ip_subnet: 172.22.40.39/24
+      internal_api:
+        ip_address: 172.22.41.40
+        ip_address_uri: 172.22.41.40
+        ip_subnet: 172.22.41.40/24
+      storage:
+        ip_address: 172.22.42.30
+        ip_address_uri: 172.22.42.30
+        ip_subnet: 172.22.42.30/24
+resource_registry:
+  OS::TripleO::Controller::Ports::ExternalPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_external.yaml
+  OS::TripleO::Controller::Ports::InternalApiPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_internal_api.yaml
+  OS::TripleO::Controller::Ports::StoragePort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_storage.yaml
+  OS::TripleO::DeployedServer::ControlPlanePort: /usr/share/openstack-tripleo-heat-templates/deployed-server/deployed-neutron-port.yaml

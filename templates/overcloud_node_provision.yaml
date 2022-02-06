@@ -16,6 +16,8 @@
       - Tenant
       default_route_network:
       - external
+  ansible_playbooks:
+    - playbook: baremetal_playbook.yaml
   instances:
     - hostname: oc-ctl-0
       name: ovirt-controller-0
@@ -39,6 +41,8 @@
       template: ~/tripleo-overcloud-deploy/nic-config/multiple_nics_comp.j2
       networks_skip_config:
       - External
+  ansible_playbooks:
+    - playbook: baremetal_playbook.yaml
   instances:
     - hostname: oc-comp-0
       name: ovirt-compute-0
@@ -61,6 +65,8 @@
       - Tenant
       - DataVlan
       - External
+  ansible_playbooks:
+    - playbook: baremetal_playbook.yaml
   instances:
     - hostname: oc-mon-0
       name: ovirt-ceph-mon-0
@@ -85,6 +91,8 @@
       - Tenant
       - DataVlan
       - External
+  ansible_playbooks:
+    - playbook: baremetal_playbook.yaml
   instances:
     - hostname: oc-osd-0
       name: ovirt-ceph-osd-0
