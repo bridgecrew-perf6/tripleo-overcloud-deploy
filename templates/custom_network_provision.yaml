@@ -47,3 +47,17 @@
           end: 172.22.40.40
       gateway_ip: 172.22.40.1
       vlan: 40
+
+- name: Storage
+  name_lower: storage
+  vip: true
+  mtu: 1500
+  dns_domain: storage.ooo.maas.
+  subnets:
+    storage_subnet:
+      ip_subnet: 172.22.42.0/24
+      allocation_pools:
+        - start: 172.22.42.30
+          end: 172.22.42.40
+      gateway_ip: 172.22.42.1
+      vlan: 42
