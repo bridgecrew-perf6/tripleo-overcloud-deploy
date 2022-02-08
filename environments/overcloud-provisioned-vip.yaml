@@ -17,7 +17,12 @@ parameter_defaults:
       ip_address: 172.22.41.25
       ip_address_uri: 172.22.41.25
       ip_subnet: 172.22.41.25/24
+    storage:
+      ip_address: 172.22.42.25
+      ip_address_uri: 172.22.42.25
+      ip_subnet: 172.22.42.25/24
 resource_registry:
   OS::TripleO::Network::Ports::ControlPlaneVipPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_vip_ctlplane.yaml
   OS::TripleO::Network::Ports::ExternalVipPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_vip_external.yaml
   OS::TripleO::Network::Ports::InternalApiVipPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_vip_internal_api.yaml
+  OS::TripleO::Network::Ports::StorageVipPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_vip_storage.yaml

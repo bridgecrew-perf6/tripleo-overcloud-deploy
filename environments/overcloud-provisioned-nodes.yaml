@@ -13,31 +13,31 @@ parameter_defaults:
       - ip_address: 172.22.43.45
     oc-comp-1-ctlplane:
       fixed_ips:
-      - ip_address: 172.22.43.42
+      - ip_address: 172.22.43.26
     oc-ctl-0-ctlplane:
       fixed_ips:
-      - ip_address: 172.22.43.32
+      - ip_address: 172.22.43.49
     oc-ctl-1-ctlplane:
       fixed_ips:
-      - ip_address: 172.22.43.35
+      - ip_address: 172.22.43.31
     oc-mon-0-ctlplane:
       fixed_ips:
-      - ip_address: 172.22.43.48
+      - ip_address: 172.22.43.32
     oc-mon-1-ctlplane:
       fixed_ips:
-      - ip_address: 172.22.43.27
+      - ip_address: 172.22.43.47
     oc-mon-2-ctlplane:
       fixed_ips:
-      - ip_address: 172.22.43.43
+      - ip_address: 172.22.43.42
     oc-osd-0-ctlplane:
       fixed_ips:
-      - ip_address: 172.22.43.38
+      - ip_address: 172.22.43.48
     oc-osd-1-ctlplane:
       fixed_ips:
-      - ip_address: 172.22.43.24
+      - ip_address: 172.22.43.39
     oc-osd-2-ctlplane:
       fixed_ips:
-      - ip_address: 172.22.43.26
+      - ip_address: 172.22.43.28
   HostnameMap:
     overcloud-cephmon-0: oc-mon-0
     overcloud-cephmon-1: oc-mon-1
@@ -63,54 +63,97 @@ parameter_defaults:
         ip_address: 172.22.41.38
         ip_address_uri: 172.22.41.38
         ip_subnet: 172.22.41.38/24
+      storage:
+        ip_address: 172.22.42.32
+        ip_address_uri: 172.22.42.32
+        ip_subnet: 172.22.42.32/24
       tenant:
-        ip_address: 172.22.44.40
-        ip_address_uri: 172.22.44.40
-        ip_subnet: 172.22.44.40/24
+        ip_address: 172.22.44.31
+        ip_address_uri: 172.22.44.31
+        ip_subnet: 172.22.44.31/24
     oc-comp-1:
       ctlplane:
-        ip_address: 172.22.43.42
-        ip_address_uri: 172.22.43.42
-        ip_subnet: 172.22.43.42/24
+        ip_address: 172.22.43.26
+        ip_address_uri: 172.22.43.26
+        ip_subnet: 172.22.43.26/24
       data_vlan:
-        ip_address: 172.22.45.37
-        ip_address_uri: 172.22.45.37
-        ip_subnet: 172.22.45.37/24
+        ip_address: 172.22.45.34
+        ip_address_uri: 172.22.45.34
+        ip_subnet: 172.22.45.34/24
       internal_api:
-        ip_address: 172.22.41.33
-        ip_address_uri: 172.22.41.33
-        ip_subnet: 172.22.41.33/24
+        ip_address: 172.22.41.40
+        ip_address_uri: 172.22.41.40
+        ip_subnet: 172.22.41.40/24
+      storage:
+        ip_address: 172.22.42.39
+        ip_address_uri: 172.22.42.39
+        ip_subnet: 172.22.42.39/24
       tenant:
-        ip_address: 172.22.44.32
-        ip_address_uri: 172.22.44.32
-        ip_subnet: 172.22.44.32/24
+        ip_address: 172.22.44.35
+        ip_address_uri: 172.22.44.35
+        ip_subnet: 172.22.44.35/24
     oc-ctl-0:
       ctlplane:
-        ip_address: 172.22.43.32
-        ip_address_uri: 172.22.43.32
-        ip_subnet: 172.22.43.32/24
+        ip_address: 172.22.43.49
+        ip_address_uri: 172.22.43.49
+        ip_subnet: 172.22.43.49/24
       external:
-        ip_address: 172.22.40.36
-        ip_address_uri: 172.22.40.36
-        ip_subnet: 172.22.40.36/24
+        ip_address: 172.22.40.30
+        ip_address_uri: 172.22.40.30
+        ip_subnet: 172.22.40.30/24
       internal_api:
-        ip_address: 172.22.41.30
-        ip_address_uri: 172.22.41.30
-        ip_subnet: 172.22.41.30/24
+        ip_address: 172.22.41.36
+        ip_address_uri: 172.22.41.36
+        ip_subnet: 172.22.41.36/24
+      storage:
+        ip_address: 172.22.42.37
+        ip_address_uri: 172.22.42.37
+        ip_subnet: 172.22.42.37/24
     oc-ctl-1:
       ctlplane:
-        ip_address: 172.22.43.35
-        ip_address_uri: 172.22.43.35
-        ip_subnet: 172.22.43.35/24
+        ip_address: 172.22.43.31
+        ip_address_uri: 172.22.43.31
+        ip_subnet: 172.22.43.31/24
       external:
         ip_address: 172.22.40.40
         ip_address_uri: 172.22.40.40
         ip_subnet: 172.22.40.40/24
       internal_api:
-        ip_address: 172.22.41.34
-        ip_address_uri: 172.22.41.34
-        ip_subnet: 172.22.41.34/24
+        ip_address: 172.22.41.39
+        ip_address_uri: 172.22.41.39
+        ip_subnet: 172.22.41.39/24
+      storage:
+        ip_address: 172.22.42.34
+        ip_address_uri: 172.22.42.34
+        ip_subnet: 172.22.42.34/24
     oc-mon-0:
+      ctlplane:
+        ip_address: 172.22.43.32
+        ip_address_uri: 172.22.43.32
+        ip_subnet: 172.22.43.32/24
+      storage:
+        ip_address: 172.22.42.40
+        ip_address_uri: 172.22.42.40
+        ip_subnet: 172.22.42.40/24
+    oc-mon-1:
+      ctlplane:
+        ip_address: 172.22.43.47
+        ip_address_uri: 172.22.43.47
+        ip_subnet: 172.22.43.47/24
+      storage:
+        ip_address: 172.22.42.36
+        ip_address_uri: 172.22.42.36
+        ip_subnet: 172.22.42.36/24
+    oc-mon-2:
+      ctlplane:
+        ip_address: 172.22.43.42
+        ip_address_uri: 172.22.43.42
+        ip_subnet: 172.22.43.42/24
+      storage:
+        ip_address: 172.22.42.38
+        ip_address_uri: 172.22.42.38
+        ip_subnet: 172.22.42.38/24
+    oc-osd-0:
       ctlplane:
         ip_address: 172.22.43.48
         ip_address_uri: 172.22.43.48
@@ -119,57 +162,32 @@ parameter_defaults:
         ip_address: 172.22.42.31
         ip_address_uri: 172.22.42.31
         ip_subnet: 172.22.42.31/24
-    oc-mon-1:
-      ctlplane:
-        ip_address: 172.22.43.27
-        ip_address_uri: 172.22.43.27
-        ip_subnet: 172.22.43.27/24
-      storage:
-        ip_address: 172.22.42.38
-        ip_address_uri: 172.22.42.38
-        ip_subnet: 172.22.42.38/24
-    oc-mon-2:
-      ctlplane:
-        ip_address: 172.22.43.43
-        ip_address_uri: 172.22.43.43
-        ip_subnet: 172.22.43.43/24
-      storage:
-        ip_address: 172.22.42.37
-        ip_address_uri: 172.22.42.37
-        ip_subnet: 172.22.42.37/24
-    oc-osd-0:
-      ctlplane:
-        ip_address: 172.22.43.38
-        ip_address_uri: 172.22.43.38
-        ip_subnet: 172.22.43.38/24
-      storage:
-        ip_address: 172.22.42.36
-        ip_address_uri: 172.22.42.36
-        ip_subnet: 172.22.42.36/24
     oc-osd-1:
       ctlplane:
-        ip_address: 172.22.43.24
-        ip_address_uri: 172.22.43.24
-        ip_subnet: 172.22.43.24/24
+        ip_address: 172.22.43.39
+        ip_address_uri: 172.22.43.39
+        ip_subnet: 172.22.43.39/24
       storage:
-        ip_address: 172.22.42.33
-        ip_address_uri: 172.22.42.33
-        ip_subnet: 172.22.42.33/24
+        ip_address: 172.22.42.35
+        ip_address_uri: 172.22.42.35
+        ip_subnet: 172.22.42.35/24
     oc-osd-2:
       ctlplane:
-        ip_address: 172.22.43.26
-        ip_address_uri: 172.22.43.26
-        ip_subnet: 172.22.43.26/24
+        ip_address: 172.22.43.28
+        ip_address_uri: 172.22.43.28
+        ip_subnet: 172.22.43.28/24
       storage:
-        ip_address: 172.22.42.39
-        ip_address_uri: 172.22.42.39
-        ip_subnet: 172.22.42.39/24
+        ip_address: 172.22.42.30
+        ip_address_uri: 172.22.42.30
+        ip_subnet: 172.22.42.30/24
 resource_registry:
   OS::TripleO::CephMon::Ports::StoragePort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_storage.yaml
   OS::TripleO::CephStorage::Ports::StoragePort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_storage.yaml
   OS::TripleO::Compute::Ports::DataVlanPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_data_vlan.yaml
   OS::TripleO::Compute::Ports::InternalApiPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_internal_api.yaml
+  OS::TripleO::Compute::Ports::StoragePort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_storage.yaml
   OS::TripleO::Compute::Ports::TenantPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_tenant.yaml
   OS::TripleO::Controller::Ports::ExternalPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_external.yaml
   OS::TripleO::Controller::Ports::InternalApiPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_internal_api.yaml
+  OS::TripleO::Controller::Ports::StoragePort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_storage.yaml
   OS::TripleO::DeployedServer::ControlPlanePort: /usr/share/openstack-tripleo-heat-templates/deployed-server/deployed-neutron-port.yaml

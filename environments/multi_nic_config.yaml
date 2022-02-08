@@ -1,3 +1,5 @@
 parameter_defaults:
   ControllerNetworkConfigTemplate: '~/tripleo-overcloud-deploy/nic-config/multiple_nics_ctl.j2'
   ComputeNetworkConfigTemplate: '~/tripleo-overcloud-deploy/nic-config/multiple_nics_comp.j2'
+  CephMonNetworkConfigTemplate: '~/tripleo-overcloud-deploy/nic-config/multiple_nics_ceph.j2'
+  CephStorageNetworkConfigTemplate: '~/tripleo-overcloud-deploy/nic-config/multiple_nics_ceph.j2'

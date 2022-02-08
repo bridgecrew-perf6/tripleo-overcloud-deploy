@@ -33,6 +33,9 @@
 - network: external
   dns_name: external-vip
   ip_address: 172.22.40.25
+- network: storage
+  dns_name: storage-vip
+  ip_address: 172.22.42.25
 - network: ctlplane
   dns_name: ctlplane-vip
   ip_address: 172.22.43.25

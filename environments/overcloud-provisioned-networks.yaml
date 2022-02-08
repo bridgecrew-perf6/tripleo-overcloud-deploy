@@ -7,8 +7,8 @@ parameter_defaults:
           mtu: 1500
           name: data_vlan
           tags:
-          - tripleo_network_name=DataVlan
           - tripleo_net_idx=2
+          - tripleo_network_name=DataVlan
         subnets:
           data_vlan_subnet:
             cidr: 172.22.45.0/24
@@ -25,9 +25,9 @@ parameter_defaults:
           mtu: 1500
           name: external
           tags:
-          - tripleo_vip=true
           - tripleo_net_idx=3
           - tripleo_network_name=External
+          - tripleo_vip=true
         subnets:
           external_subnet:
             cidr: 172.22.40.0/24
@@ -44,9 +44,9 @@ parameter_defaults:
           mtu: 1500
           name: internal_api
           tags:
+          - tripleo_net_idx=0
           - tripleo_network_name=InternalApi
           - tripleo_vip=true
-          - tripleo_net_idx=0
         subnets:
           internal_api_subnet:
             cidr: 172.22.41.0/24
@@ -63,9 +63,9 @@ parameter_defaults:
           mtu: 1500
           name: storage
           tags:
-          - tripleo_network_name=Storage
           - tripleo_vip=true
           - tripleo_net_idx=4
+          - tripleo_network_name=Storage
         subnets:
           storage_subnet:
             cidr: 172.22.42.0/24
@@ -82,8 +82,8 @@ parameter_defaults:
           mtu: 1500
           name: tenant
           tags:
-          - tripleo_net_idx=1
           - tripleo_network_name=Tenant
+          - tripleo_net_idx=1
         subnets:
           tenant_subnet:
             cidr: 172.22.44.0/24

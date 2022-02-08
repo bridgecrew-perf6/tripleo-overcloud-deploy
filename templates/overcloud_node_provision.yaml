@@ -9,6 +9,8 @@
       subnet: internal_api_subnet
     - network: external
       subnet: external_subnet
+    - network: storage
+      subnet: storage_subnet
     network_config:
       template: ~/tripleo-overcloud-deploy/nic-config/multiple_nics_ctl.j2
       networks_skip_config:
@@ -37,6 +39,8 @@
       subnet: tenant_subnet
     - network: data_vlan
       subnet: data_vlan_subnet
+    - network: storage
+      subnet: storage_subnet
     network_config:
       template: ~/tripleo-overcloud-deploy/nic-config/multiple_nics_comp.j2
       networks_skip_config:
